@@ -1,21 +1,24 @@
 const express = require('express');
-const dotenv = require('dotenv');
+const cors = require('cors'); // Add this
 const connectDB = require('./config/db');
 const taskRoutes = require('./routes/taskRoutes');
-
-dotenv.config();
-connectDB();
+const userRoutes = require('./routes/userRoutes');
+require('dotenv').config();
 
 const app = express();
+
+// Middleware
+app.use(cors()); // Enable CORS
 app.use(express.json());
 
-app.get('/', (req, res) => {
-    res.send('Taskmasters API is running...');
-});
+// Connect to MongoDB
+connectDB();
 
-// Use Task Routes
+// Routes
 app.use('/api/tasks', taskRoutes);
+app.use('/api/users', userRoutes);
 
+// Start the server
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);

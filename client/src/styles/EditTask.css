@@ -1,0 +1,74 @@
+.edit-task-container {
+  width: 60%;
+  margin: 50px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.edit-task-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.edit-task-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.edit-task-form label {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.edit-task-form input,
+.edit-task-form select,
+.edit-task-form textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.edit-task-form textarea {
+  height: 100px;
+  resize: none;
+}
+
+.edit-task-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.save-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background-color: #45a049;
+}
+
+.cancel-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #f44336;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel-btn:hover {
+  background-color: #e53935;
+}
